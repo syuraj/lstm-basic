@@ -1,5 +1,4 @@
 # %% Import libraries
-import math
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -86,7 +85,8 @@ y_test = scaler.inverse_transform([y_test])
 
 
 # calculate root mean squared error
-trainScore = np.math.sqrt(mean_squared_error(y_train[0], x_train_predict[:, 0]))
+trainScore = np.math.sqrt(mean_squared_error(
+    y_train[0], x_train_predict[:, 0]))
 print('Train Score: %.2f RMSE' % (trainScore))
 testScore = np.math.sqrt(mean_squared_error(y_test[0], x_test_predict[:, 0]))
 print('Test Score: %.2f RMSE' % (testScore))
